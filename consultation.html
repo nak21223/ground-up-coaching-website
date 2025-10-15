@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Book Your Free Consultation</title>
+</head>
+<body>
+    <header class="bg-navy text-ivory">
+        <div class="logo-area">
+            <a href="index.html">Ground Up Coaching</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="workshops.html">Workshops</a></li>
+                <li><a href="curriculum.html">Curriculum</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+        <a href="consultation.html" class="btn btn-primary">Book a Consultation</a>
+    </header>
+
+    <main>
+        <section id="consultation-form-section" class="bg-navy text-ivory">
+            <h1 class="text-gold">Schedule a Free, No-Obligation Consultation</h1>
+            <p>A 30-minute introductory session to discuss your specific goals (individual or organizational) and determine if our behavioral science approach is the right fit. We will respond to your request within 24 hours.</p>
+        </section>
+
+        <section id="consultation-form-wrapper" class="bg-ivory">
+            <div class="form-container">
+                <form action="https://formspree.io/f/xjkaokwn/f/YOUR_CONSULTATION_ID" method="POST">
+                    
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="Name" required>
+                    
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="Email" required>
+                    
+                    <label for="interest">Primary Interest Area:</label>
+                    <select id="interest" name="Interest Area" required>
+                        <option value="">-- Select --</option>
+                        <option value="individual">Individual Coaching</option>
+                        <option value="group">Group Workshop</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+                    
+                    <label for="message">Tell us about your goal or challenge:</label>
+                    <textarea id="message" name="Message" rows="5"></textarea>
+
+                    <input type="hidden" name="_subject" value="NEW CONSULTATION REQUEST: Ground Up Coaching">
+                    <input type="hidden" name="_next" value="https://yourdomain.com/consultation-thank-you"> 
+                    
+                    <button type="submit" class="btn btn-primary">Schedule Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-sage text-navy">
+        <div class="footer-grid">
+            <div class="contact-info">
+                <p>Ground Up Coaching</p>
+                <p>Email: groundupcoaching.ny@outlook.com</p>
+            </div>
+            <div class="quick-links">
+                </div>
+            <div class="social-media">
+                </div>
+        </div>
+        <p class="copyright">&copy; 2025 Ground Up Coaching. All Rights Reserved. </p>
+        <p class="disclaimer">Not a substitute for professional mental health support.</p>
+    </footer>
+</body>
+</html>
