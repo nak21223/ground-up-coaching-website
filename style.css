@@ -212,36 +212,3 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
-    text-align: center;
-}
-
-.pillar-card {
-    padding: var(--spacing-md);
-    border: 1px solid var(--color-sage);
-    border-radius: 6px;
-    background-color: var(--color-ivory);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-/* Services Overview */
-.service-row {
-    display: flex;
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-lg);
-}
-
-.service-column {
-    flex: 1;
-    padding: var(--spacing-lg);
-    border-radius: 8px;
-    text-align: center;
-}
-
-.service-column h3 {
-    color: var(--color-navy);
-}
-
-/* Final CTA Banner */
-#final-cta-banner {
-    text-align: center;
-}
