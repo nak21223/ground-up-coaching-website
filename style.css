@@ -1,0 +1,247 @@
+/* ========================================================= */
+/* 1. Global Variables & Reset */
+/* ========================================================= */
+
+:root {
+    /* Branding Colors */
+    --color-navy: #0F1E2E; /* Primary */
+    --color-gold: #C7A24B; /* Accent */
+    --color-sage: #CED9C3; /* Supportive Background */
+    --color-ivory: #FFFFF8; /* Light Background */
+
+    /* Typography */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-lg: 3rem;
+    --spacing-md: 1.5rem;
+    --spacing-sm: 0.75rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    color: var(--color-navy);
+    background-color: #ffffff; /* Default safety background */
+}
+
+/* Base Headings */
+h1, h2, h3 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Class Helpers (for background/text colors) */
+.bg-navy { background-color: var(--color-navy); }
+.bg-gold { background-color: var(--color-gold); }
+.bg-sage { background-color: var(--color-sage); }
+.bg-ivory { background-color: var(--color-ivory); }
+.text-navy { color: var(--color-navy); }
+.text-ivory { color: var(--color-ivory); }
+.text-gold { color: var(--color-gold); }
+
+
+/* ========================================================= */
+/* 2. Global Layout Structure */
+/* ========================================================= */
+
+main {
+    padding-top: 80px; /* Space for fixed header */
+}
+
+section {
+    padding: var(--spacing-lg) 10%;
+    min-height: 40vh;
+}
+
+
+/* ========================================================= */
+/* 3. Header & Navigation */
+/* ========================================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed; /* Makes header stick to the top */
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-area a {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: var(--spacing-lg);
+}
+
+nav ul li a {
+    color: var(--color-ivory);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-gold);
+}
+
+
+/* ========================================================= */
+/* 4. Buttons (Call-to-Action) */
+/* ========================================================= */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+/* Primary Button (Navy on Ivory/Light) */
+.btn-primary {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+}
+
+.btn-primary:hover {
+    background-color: #a5833c; /* Slightly darker gold */
+}
+
+/* Secondary Button (Outline on Navy/Dark) */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-ivory);
+    border-color: var(--color-ivory);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-ivory);
+    color: var(--color-navy);
+}
+
+/* Button for Gold Background (e.g., Final CTA) */
+.btn-navy-on-gold {
+    background-color: var(--color-navy);
+    color: var(--color-gold);
+}
+
+
+/* ========================================================= */
+/* 5. Footer */
+/* ========================================================= */
+
+footer {
+    padding: var(--spacing-lg) 10%;
+    border-top: 5px solid var(--color-gold);
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.copyright, .disclaimer {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: var(--spacing-sm);
+}
+
+
+/* ========================================================= */
+/* 6. Home Page Specific Styles */
+/* ========================================================= */
+
+/* Hero Section */
+#hero-home {
+    padding-top: calc(80px + var(--spacing-lg)); /* Push content down past fixed header */
+    text-align: center;
+}
+
+#hero-home h1 {
+    color: var(--color-gold);
+    font-size: 3rem;
+}
+
+#hero-home h2 {
+    font-weight: 300;
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-group a {
+    margin: 0 var(--spacing-sm);
+}
+
+/* Approach Pillars */
+.pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.pillar-card {
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-sage);
+    border-radius: 6px;
+    background-color: var(--color-ivory);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Services Overview */
+.service-row {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.service-column {
+    flex: 1;
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.service-column h3 {
+    color: var(--color-navy);
+}
+
+/* Final CTA Banner */
+#final-cta-banner {
+    text-align: center;
+}
